@@ -1,0 +1,26 @@
+maker
+=====
+
+Modular Makefile.
+
+- Common variables (SRC, LDFLAGS, CFLAGS etc) are files. It allows to rebuild what's necessary by
+  making explicit dependencies to those files (changing CFLAGS requires complete rebuild, changing
+  LDFLAGS only require relinking, changing SRC may require compiling new files and then relink,
+  etc)
+- Simply add your custom rules as files, never edit 'core' ones. Variables can be added as files.
+
+TODO
+----
+
+- Control verbosity
+- Different filesystem organization
+- Allow specifying subprojects (ala boilermake)
+- Allow explicit per-file variable override (ex: different CFLAGS for some files)
+- Better support for archive files (can be done manually, but it's better to support them directly)
+
+Status
+------
+
+By providing a SRC file in make/vars, it can build an executable project. With the rights LDFLAGS,
+it can make shared objects files too. (No direct archive file support). It warns about files it
+doesn't know what to do with.
