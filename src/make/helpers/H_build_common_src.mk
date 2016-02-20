@@ -11,8 +11,12 @@
 #
 
 define build_common =
+
+.PHONY: ${1}.build
+
 OBJS += ${2}
-${2} : ${1}
+
+${1}.build ${2} : ${1}
 	@mkdir -p $(dir ${2});
 	$$(strip ${3} -c -o ${2} $${COMMON_OPTS} ${4} $$(addprefix -I,$${INCPATH}) $$(addprefix -D,$${DEFINES}) -MP -MD -MF ${2:.o=.d} ${1})
 -include ${2:.o=.d}
