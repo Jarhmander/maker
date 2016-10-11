@@ -17,6 +17,7 @@ TODO
 - Allow specifying subprojects (ala boilermake)
 - Allow explicit per-file variable override (ex: different CFLAGS for some files)
 - Better support for archive files (can be done manually, but it's better to support them directly)
+- (find a better name?)
 
 Status
 ------
