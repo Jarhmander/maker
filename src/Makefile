@@ -6,7 +6,7 @@ include $(wildcard make/helpers/H_*.mk)
 .PHONY: all
 
 
-all: $(TARGET)
+all: ${TARGET}
 
-$(generate_rules)
+${generate_rules}
 
