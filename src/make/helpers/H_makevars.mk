@@ -1,7 +1,10 @@
+####################################################################################################
 #
-# makevar: once included, create vars from make/vars/*
+# makevars.mk: once included, create vars from make/vars/*
 #
 # requires: readfile
+#
+####################################################################################################
 
 include $(dir $(lastword ${MAKEFILE_LIST}))H_readfile.mk
 
