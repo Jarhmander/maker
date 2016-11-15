@@ -6,7 +6,7 @@
 #
 ####################################################################################################
 
-include $(dir $(lastword ${MAKEFILE_LIST}))H_readfile.mk
+include $(dir $(lastword ${MAKEFILE_LIST}))readfile.mk
 
 $(foreach var,$(wildcard make/vars/*),$(eval $(notdir ${var}) := $(call readfile,${var})))
 

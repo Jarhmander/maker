@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-include $(wildcard make/helpers/H_*.mk)
+include $(wildcard make/function/*.mk)
 
 all: ${TARGET}
 
