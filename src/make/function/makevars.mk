@@ -26,8 +26,7 @@ define generate_rules_imp =
     $(eval ${generate_rules_list})
     unhandled_files := $$(filter-out ${handled_extensions},${SRC})
     $$(if $${unhandled_files},\
-        $$(warning Unhandled files in SRC: $${unhandled_files})\
-    )
+        $$(warning Unhandled files in SRC: $${unhandled_files}))
 
 endef
 

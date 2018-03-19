@@ -36,9 +36,7 @@ define generate_rules_list +=
 $(foreach src,$(strip $(filter %.c,${SRC})),$(eval $(call build_common,${src},${OBJDIR}/${src:.c=.o},${CC},${CFLAGS})))
 $(foreach cxxext,${build_c_cpp_ext},\
    $(foreach src,$(strip $(filter %.${cxxext},${SRC})),\
-      $(eval $(call build_common,${src},${OBJDIR}/${src:.${cxxext}=.o},${CXX},${CXXFLAGS}))\
-    )
-)
+      $(eval $(call build_common,${src},${OBJDIR}/${src:.${cxxext}=.o},${CXX},${CXXFLAGS}))))
 endef
 
 handled_extensions += %.c $(addprefix %.,${build_c_cpp_ext})
